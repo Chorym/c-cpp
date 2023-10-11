@@ -325,66 +325,246 @@ void question19()
 
 void question20()
 {
-    cout << "Liệt kê tất cả các “ước số” của số nguyên dương n" << endl;
-    unsigned int input;
-    cout << "Input : ";
+    cout << "liet ke cac uoc so cua n" << endl;
+    int input;
+    cout << "Input n: ";
     cin >> input;
-    
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+        }
+    }
 }
 
 void question21()
 {
-
+    cout << "tong cac uoc so cua n" << endl;
+    int input, sum;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+            sum += i;
+        }
+    }
+    cout << endl;
+    cout << "tong cac uoc cua n = " << sum << endl;
 }
 
 void question22()
 {
-
+    cout << "tich cac uoc so cua n" << endl;
+    int input, product = 1;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+            product *= i;
+        }
+    }
+    cout << endl;
+    cout << "tich cac uoc cua n = " << product << endl;
 }
 
 void question23()
 {
-
+    cout << "so luong cac uoc so cua n" << endl;
+    int input, count;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+            count += 1;
+        }
+    }
+    cout << endl;
+    cout << "so luong cac uoc cua n = " << count << endl;
 }
 
 void question24()
 {
-
+    cout << "cac uoc so le cua n" << endl;
+    int input;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so le cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0 && i % 2 == 1)
+        {
+            cout << i << ", ";
+        }
+    }
+    cout << endl;
 }
 
 void question25()
 {
-
+    cout << "tong cac uoc so chan cua n" << endl;
+    int input, sum;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so chan cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0 && i % 2 == 0)
+        {
+            cout << i << ", ";
+            sum += i;
+        }
+    }
+    cout << endl;
+    cout << "tong cac uoc so chan cua n: " << sum << endl;
 }
 
 void question26()
 {
-
+    cout << "tich cac uoc so le cua n" << endl;
+    int input, product = 1;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so le cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0 && i % 2 == 1)
+        {
+            cout << i << ", ";
+            product *= i;
+        }
+    }
+    cout << endl;
+    cout << "tich cac uoc so le cua n: " << product << endl;
 }
 
 void question27()
 {
-
+    cout << "so luong cac uoc so chan cua n" << endl;
+    int input, count;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+        }
+    }
+    cout << endl;
+    cout << "cac uoc chan so cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0 && i % 2 == 0)
+        {
+            cout << i << ", ";
+            count += 1;
+        }
+    }
+    cout << endl;
+    cout << "so luong cac uoc chan cua n = " << count << endl;
 }
 
 void question28()
 {
-
+    cout << "tong cac uoc so cua n nho hon n" << endl;
+    int input, sum;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so cua n: ";
+    for(int i = 1; i < input; i++)
+    {
+        if(input % i == 0)
+        {
+            cout << i << ", ";
+            sum += i;
+        }
+    }
+    cout << input;
+    cout << endl;
+    cout << "tong cac uoc cua n nho hon n = " << sum << endl;
 }
 
 void question29()
 {
-
+    cout << "uoc so le lon nhat cua n" << endl;
+    int input, max;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "cac uoc so le cua n: ";
+    for(int i = 1; i <= input; i++)
+    {
+        if(input % i == 0 && i % 2 == 1)
+        {
+            cout << i << ", ";
+            max = i;
+        }
+    }
+    cout << endl;
+    cout << "uoc le lon nhat cua n: " << max << endl;
 }
 
 void question30()
 {
-
+    cout << "kiem tra so n co phai so hoan thien" << endl;
+    int input, sum;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 1; i < input; i++)
+    {
+        if(input % i == 0)
+        {
+            sum += i;
+        }
+    }
+    if(sum == input)
+    {
+        cout << "so n la so hoan thien";
+    }
+    else
+    {
+        cout << "so n ko phai la so hoan thien";
+    }
 }
 
 void question31()
 {
-
+    cout << "kiem tra so n co phai so nguyen to" << endl;
+    int input;
+    cout << "Input n: ";
+    cin >> input;
+    if (input == 0 || input == 1)
+    {
+        cout << "n ko phai la so nguyen to";
+    }
+    else
+    {
+        for(int i = 0; i < input/2; i++)
+        {
+            if(input % i == 1)
+            {
+                cout << "n la so nguyen to";
+            }
+            else
+            {
+                cout << "n ko phai la so nguyen to";
+            }
+        }
+    }
 }
 
 void question32()
@@ -477,6 +657,48 @@ int main()
             question18(); break;
         case 19:
             question19(); break;
+        case 20:
+            question20(); break;
+        case 21:
+            question21(); break;
+        case 22:
+            question22(); break;
+        case 23:
+            question23(); break;
+        case 24:
+            question24(); break;
+        case 25:
+            question25(); break;
+        case 26:
+            question26(); break;
+        case 27:
+            question27(); break;
+        case 28:
+            question28(); break;
+        case 29:
+            question29(); break;
+        case 30:
+            question30(); break;
+        case 31:
+            question31(); break;
+        case 32:
+            question32(); break;
+        case 33:
+            question33(); break;
+        case 34:
+            question34(); break;
+        case 35:
+            question35(); break;
+        case 36:
+            question36(); break;
+        case 37:
+            question37(); break;
+        case 38:
+            question38(); break;
+        case 39:
+            question39(); break;
+        case 40:
+            question40(); break;
         default:
             cout << "Doesn't exist.";
     }
