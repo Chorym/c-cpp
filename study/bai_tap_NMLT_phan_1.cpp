@@ -545,11 +545,12 @@ void question31()
 {
     cout << "kiem tra so n co phai so nguyen to" << endl;
     int input;
+    bool isPrime;
     cout << "Input n: ";
     cin >> input;
     if (input == 0 || input == 1)
     {
-        cout << "n ko phai la so nguyen to";
+        isPrime = false;
     }
     else
     {
@@ -557,13 +558,21 @@ void question31()
         {
             if(input % i == 1)
             {
-                cout << "n la so nguyen to";
+                isPrime = true;
             }
             else
             {
-                cout << "n ko phai la so nguyen to";
+                isPrime = false;
             }
         }
+    }
+    if (isPrime)
+    {
+        cout << "n la so nguyen to" << endl;
+    }
+    else
+    {
+        cout << "n ko la so nguyen to" << endl;
     }
 }
 
