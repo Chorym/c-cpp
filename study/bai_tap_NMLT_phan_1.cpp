@@ -578,7 +578,18 @@ void question31()
 
 void question32()
 {
-
+    cout << "kiem tra n co phai la so chinh phuong" << endl;
+    int input;
+    cout << "Input n: ";
+    cin >> input;
+    if(sqrt(input) == int)
+    {
+        cout << "n la so chinh phuong";
+    }
+    else
+    {
+        cout << "n ko la so chinh phuong";
+    }
 }
 
 void question33()
