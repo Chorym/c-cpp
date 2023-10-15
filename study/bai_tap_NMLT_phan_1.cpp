@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <string>
 
 using namespace std;
 
@@ -582,7 +583,7 @@ void question32()
     int input;
     cout << "Input n: ";
     cin >> input;
-    if(sqrt(input) == int)
+    if(sqrt(input) == int(sqrt(input)))
     {
         cout << "n la so chinh phuong";
     }
@@ -594,42 +595,243 @@ void question32()
 
 void question33()
 {
-
+    cout << "S(n) = CanBac2(2+CanBac2(2+….+CanBac2(2 + CanBac2(2)))) n lan" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = sqrt(2 + term);
+    }
+    cout << "Answer = " << term;
 }
 
 void question34()
 {
-
+    cout << "S(n) = CanBac2(n+CanBac2(n - 1 + CanBac2( n - 2 + ... + CanBac2(2 + CanBac2(1) n lan" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = sqrt(input-i + term);
+    }
+    cout << "Answer = " << term;
 }
 
 void question35()
 {
-
+    cout << "hehe";
 }
 
 void question36()
 {
-
+    cout << "Tính S(n) = CanBac2(n! + CanBac2((n-1)! +CanBac2((n - 2)! + ... + CanBac2(2!) + CanBac2(1!)))) n lan" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = sqrt(factorial(input-i) + term);
+    }
+    cout << "Answer = " << term;
 }
 
 void question37()
 {
-
+    cout << "S(n) = CanBac N(N + CanBac N - 1(N - 1 + ... + CanBac3(3 + CanBac2(2))) có n - 1 dấu căn" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = pow((input-i) + term, 1/(input-i));
+    }
+    cout << "Answer = " << term;
 }
 
 void question38()
 {
-
+    cout << "CanBac N + 1(N + CanBac N(N - 1 + ... +CanBac3(2 + CanBac2(1)))) n lan" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = pow((input-i) + term, 1/(input));
+    }
+    cout << "Answer = " << term;
 }
 
 void question39()
 {
-
+    cout << "Tính S(n) = CanBac N + 1(N! + CanBacN((N - 1)! + … + CanBac3(2! + CanBac2(1!))) n lan " << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = pow(factorial(input-i) + term, 1/(input));
+    }
+    cout << "Answer = " << term;
 }
 
 void question40()
 {
+    cout << "S(x, n) = CanBac2(x^n + CanBac2(x^n-1 + … + CanBac2(x^2 + CanBac2(x)))) n lan" << endl;
+    int inputX, inputN;
+    float term;
+    cout << "InputX: ";
+    cin >> inputX;
+    cout << "InputN: ";
+    cin >> inputN;
+    for(int i = 0; i < inputN; i++)
+    {
+        term = sqrt(pow(inputX, inputN - i) + term);
+    }
+    cout << "Answer = " << term;
+}
 
+void question41()
+{
+    cout << "1 / (1 + 1 / ( 1 + 1 / (... 1 + 1 / 1 + 1))) n lan" << endl;
+    int input;
+    float term;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input; i++)
+    {
+        term = 1/(1 + term);
+    }
+    cout << "Answer = " << term;
+}
+
+void question42()
+{
+    cout << "cho n; tim k sao cho s(k) = 1+2+3+...+k < n" << endl;
+    int input, answer, sum = 0;
+    cout << "Input: ";
+    cin >> input;
+    for(int k = 1; k < input; k++)
+    {
+        sum += k;
+        if(sum >= input)
+            break;
+        answer = k; 
+    }
+    cout << "K = " << answer;
+}
+
+void question43()
+{
+    cout << "dem so luong chu so trong n" << endl;
+    string input;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "so luong chu so trong n = " << input.length();
+}
+
+void question44()
+{
+    cout << "tong cac chu so trong n" << endl;
+    string input;
+    int answer = 0;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        answer += input[i] - '0';
+    }
+    cout << "tong = " << answer;
+}
+
+void question45()
+{
+    cout << "tich cac chu so trong n" << endl;
+    string input;
+    int answer = 1;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        answer *= input[i] - '0';
+    }
+    cout << "tich = " << answer;
+}
+
+void question46()
+{
+    cout << "so luong chu so le trong n" << endl;
+    string input;
+    int answer = 0;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') % 2 == 1)
+            answer += 1;
+    }
+    cout << "so luong = " << answer;
+}
+
+void question47()
+{
+    cout << "tong chu so chan trong n" << endl;
+    string input;
+    int answer = 0;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') % 2 == 0)
+            answer += (input[i] - '0');
+    }
+    cout << "tong = " << answer;
+}
+
+void question48()
+{
+    cout << "tich chu so le trong n" << endl;
+    string input;
+    int answer = 1;
+    cout << "Input n: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') % 2 == 1)
+            answer *= (input[i] - '0');
+    }
+    cout << "tich = " << answer;
+}
+
+void question49()
+{
+    cout << "chu so dau tien trong n" << endl;
+    string input;
+    int answer = 1;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "answer = " << input[0];
+}
+
+void question50()
+{
+    cout << "so dao nguoc cua n" << endl;
+    string input;
+    string answer;
+    cout << "Input n: ";
+    cin >> input;
+    cout << "answer = ";
+    for(int i = 0; i <= input.length(); i++)
+    {
+        cout << input[input.length()-i];
+    }
 }
 
 int main()
@@ -719,6 +921,26 @@ int main()
             question39(); break;
         case 40:
             question40(); break;
+        case 41:
+            question41(); break;
+        case 42:
+            question42(); break;
+        case 43:
+            question43(); break;
+        case 44:
+            question44(); break;
+        case 45:
+            question45(); break;
+        case 46:
+            question46(); break;
+        case 47:
+            question47(); break;
+        case 48:
+            question48(); break;
+        case 49:
+            question49(); break;
+        case 50:
+            question50(); break;
         default:
             cout << "Doesn't exist.";
     }
