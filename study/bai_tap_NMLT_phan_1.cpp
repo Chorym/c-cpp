@@ -968,17 +968,52 @@ void question59()
 
 void question60()
 {
+    cout << "kiem tra cac chu so cua n co tang dan tu trai sang phai" << endl;
+    string input, isAscending = "True";
+    int min = 0;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') >= min)
+        {
+            min = (input[i] - '0');
+        }
+        else
+        {
+            isAscending = "False";
+            break;
+        }
+    }
+    cout << "Answer: " << isAscending;
 
 }
 
 void question61()
 {
-
+    cout << "kiem tra cac chu so cua n co giam dan tu trai sang phai" << endl;
+    string input, isDecending = "True";
+    int max = 9;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') <= max)
+        {
+            max = (input[i] - '0');
+        }
+        else
+        {
+            isDecending = "False";
+            break;
+        }
+    }
+    cout << "Answer: " << isDecending;
 }
 
 void question62()
 {
-
+    
 }
 
 void question63()
