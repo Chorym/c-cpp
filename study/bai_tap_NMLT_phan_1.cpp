@@ -824,7 +824,6 @@ void question50()
 {
     cout << "so dao nguoc cua n" << endl;
     string input;
-    string answer;
     cout << "Input n: ";
     cin >> input;
     cout << "answer = ";
@@ -832,6 +831,194 @@ void question50()
     {
         cout << input[input.length()-i];
     }
+}
+
+void question51()
+{
+    cout << "chu so lon nhat trong n" << endl;
+    string input;
+    int max = 0;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i]-'0') > max)
+            max = (input[i] - '0');
+    }
+    cout << "chu so lon nhat = " << max;
+}
+
+void question52()
+{
+    cout << "chu so nho nhat trong n" << endl;
+    string input;
+    int min = 9;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i]-'0') < min)
+            min = (input[i] - '0');
+    }
+    cout << "chu so nho nhat = " << min;
+}
+
+void question53()
+{
+    cout << "chu so lon nhat trong n va so luong cua chung" << endl;
+    string input;
+    int max = 0, count;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i]-'0') >= max)
+        {
+            if((input[i]-'0') != max)
+                count = 0;
+            max = (input[i] - '0');
+            count += 1;
+        }
+    }
+    cout << "chu so lon nhat = " << max << endl;
+    cout << "so luong = " << count;
+}
+
+void question54()
+{
+    cout << "chu so nho nhat trong n va so luong cua chung" << endl;
+    string input;
+    int min = 9, count;
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i]-'0') <= min)
+        {
+            if((input[i]-'0') != min)
+                count = 0;
+            min = (input[i] - '0');
+            count += 1;
+        }
+    }
+    cout << "chu so nho nhat = " << min << endl;
+    cout << "so luong = " << count;
+}
+
+void question55()
+{
+    cout << "hehe";
+}
+
+void question56()
+{
+    cout << "kiem tra n co toan chu so le hay ko" << endl;
+    string input, isOdd = "True";
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') % 2 == 0)
+        {
+            isOdd = "False";
+            break;
+        }
+    }
+    cout << "Answer: " << isOdd;
+}
+
+void question57()
+{
+    cout << "kiem tra n co toan chu so le hay ko" << endl;
+    string input, isEven = "True";
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length(); i++)
+    {
+        if((input[i] - '0') % 2 == 1)
+        {
+            isEven = "False";
+            break;
+        }
+    }
+    cout << "Answer: " << isEven;
+}
+
+void question58()
+{
+    cout << "hehe";
+}
+
+void question59()
+{
+    cout << "kiem tra n co phai so doi xung" << endl;
+    string input, isMirrored = "True";
+    cout << "Input: ";
+    cin >> input;
+    for(int i = 0; i < input.length()/2; i++)
+    {
+        if(input[i] != input[input.length()-(i+1)])
+        {
+            isMirrored = "False";
+            break;
+        }
+    }
+    cout << "Answer: " << isMirrored;
+}
+
+void question60()
+{
+
+}
+
+void question61()
+{
+
+}
+
+void question62()
+{
+
+}
+
+void question63()
+{
+
+}
+
+void question64()
+{
+
+}
+
+void question65()
+{
+
+}
+
+void question66()
+{
+
+}
+
+void question67()
+{
+
+}
+
+void question68()
+{
+
+}
+
+void question69()
+{
+
+}
+
+void question70()
+{
+
 }
 
 int main()
@@ -941,6 +1128,46 @@ int main()
             question49(); break;
         case 50:
             question50(); break;
+        case 51:
+            question51(); break;
+        case 52:
+            question52(); break;
+        case 53:
+            question53(); break;
+        case 54:
+            question54(); break;
+        case 55:
+            question55(); break;
+        case 56:
+            question56(); break;
+        case 57:
+            question57(); break;
+        case 58:
+            question58(); break;
+        case 59:
+            question59(); break;
+        case 60:
+            question60(); break;
+        case 61:
+            question61(); break;
+        case 62:
+            question62(); break;
+        case 63:
+            question63(); break;
+        case 64:
+            question64(); break;
+        case 65:
+            question65(); break;
+        case 66:
+            question66(); break;
+        case 67:
+            question67(); break;
+        case 68:
+            question68(); break;
+        case 69:
+            question69(); break;
+        case 70:
+            question70(); break;
         default:
             cout << "Doesn't exist.";
     }
