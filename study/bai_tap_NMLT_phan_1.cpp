@@ -1013,45 +1013,228 @@ void question61()
 
 void question62()
 {
-    
+    cout << "uoc chung lon nhat cua 2 so" << endl;
+    int inputA, inputB, largestCommonDivisor = 1;
+    cout << "Input a: ";
+    cin >> inputA;
+    cout << "Input b: ";
+    cin >> inputB;
+    for(int i = 1; i < i; i++)
+    {
+
+    }
 }
 
 void question63()
 {
-
+    //i dont wanna do this one
 }
 
 void question64()
 {
-
+    cout << "giai pt bac 1" << endl;
+    int a, b;
+    cout << "he so a = ";
+    cin >> a;
+    cout << "he so b = ";
+    cin >> b;
+    if(a == 0)
+    {
+        cout << "vo nghiem";
+    }
+    else
+    {
+        if(a == 0 && b == 0)
+        {
+            cout << "vo so nghiem";
+        }
+        else
+        {
+            cout << "x = " << -b/a;
+        }
+    }
 }
 
 void question65()
 {
-
+    cout << "giai pt bac 2" << endl;
+    int a, b, c;
+    float delta = 0;
+    cout << "he so a = ";
+    cin >> a;
+    cout << "he so b = ";
+    cin >> b;
+    cout << "he so c = ";
+    cin >> c;
+    delta = pow(b, 2)-4*a*c;
+    if(delta < 0)
+    {
+        cout << "khong co nghiem so thuc";
+    }
+    else
+    {
+        if(delta == 0)
+        {
+            cout << "1 nghiem kep = " << -b/(2*a);
+        }
+        else
+        {
+            cout << "n1 = " << (-b+sqrt(delta))/(2*a) << "\n" << "n2 = " << (-b-sqrt(delta))/(2*a) << "\n";
+        }
+    }
 }
 
 void question66()
 {
-
+    //i dont wanna do this one
 }
 
 void question67()
 {
-
+    cout << "S(x, n) = x - x^2 + x^3 + ... + (-1)^n+1 * x^n" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = -1; i < n; i++)
+    {
+        total += pow((-1), i+1) * pow(x, n);
+    }
+    cout << "answer = " << total;
 }
 
 void question68()
 {
-
+    cout << "S(x, n) = -x^2 + x^4 + ... + (-1)^n * x^2n" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        total += pow((-1), i) * pow(x, 2*n);
+    }
+    cout << "answer = " << total;
 }
 
 void question69()
 {
-
+    cout << "S(x, n) = (-1)^0x - x^3 + x^5 + ... + (-1)^n * x^2n+1" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        total += pow((-1), i) * pow(x, 2*n+1);
+    }
+    cout << "answer = " << total;
 }
 
 void question70()
+{
+    cout << "S(n) = 1 - 1/(1 + 2) + 1/(1 + 2 + 3) + ... + (-1)^n+1 * 1/(1 + 2 + 3+ ... + n)" << endl;
+    int n, sum = 2, total;
+    cout << "n = ";
+    cin >> n;
+    for(int i = -1; i < n; i++)
+    {
+        sum += i;
+        total += pow(-1, i+1)*(1/(sum));
+    }
+    cout << "answer = " << total;
+}
+
+void question71()
+{
+    cout << "S(x, n) = -x + x^2/(1 + 2) - x^3/(1 + 2 + 3) + ... + (-1)^n * x^n/(1 + 2 + ... + n)" << endl;
+    int x, n, total, sum;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        sum += i;
+        total += pow((-1), i) * (pow(x, 2*n)/sum);
+    }
+    cout << "answer = " << total;
+}
+
+void question72()
+{
+    cout << "S(x, n) = - x + x^2/2! - x^3/3! + ... + (-1)^n * x^n/n!" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        total += pow((-1), i) * (pow(x, 2*n)/factorial(n));
+    }
+    cout << "answer = " << total;
+}
+
+void question73()
+{
+    cout << "S(x, n) = -1 + x^2/2! - x^4/4! + ... + (-1)^n+1 * x^2n/(2n)!" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        total += pow((-1), i+1) * (pow(x, 2*n)/factorial(2*n));
+    }
+    cout << "answer = " << total;
+}
+
+void question74()
+{
+    cout << "S(x, n) = 1 - x + x^3/3! - x^5/5! + ... + (-1)^n+1 * x^2n+1/(2n + 1)!" << endl;
+    int x, n, total;
+    cout << "x = ";
+    cin >> x;
+    cout << "n = ";
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        total += pow((-1), i+1) * (pow(x, 2*n+1)/factorial(2*n+1));
+    }
+    cout << "answer = " << total;
+}
+
+void question75()
+{
+
+}
+
+void question76()
+{
+
+}
+
+void question77()
+{
+    //done
+}
+
+void question78()
+{
+    //done
+}
+
+void question79()
+{
+    //done
+}
+
+void question80()
 {
 
 }
@@ -1203,6 +1386,26 @@ int main()
             question69(); break;
         case 70:
             question70(); break;
+        case 71:
+            question71(); break;
+        case 72:
+            question72(); break;
+        case 73:
+            question73(); break;
+        case 74:
+            question74(); break;
+        case 75:
+            question75(); break;
+        case 76:
+            question76(); break;
+        case 77:
+            question77(); break;
+        case 78:
+            question78(); break;
+        case 79:
+            question79(); break;
+        case 80:
+            question80(); break;
         default:
             cout << "Doesn't exist.";
     }
