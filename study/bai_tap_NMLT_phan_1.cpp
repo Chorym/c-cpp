@@ -728,6 +728,8 @@ void question42()
     cout << "K = " << answer;
 }
 
+// use % and // instead lmao
+
 void question43()
 {
     cout << "dem so luong chu so trong n" << endl;
